@@ -30,7 +30,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.enefyod.app.App</mainClass>
+                            <mainClass>com.enefyod.app.Launcher</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -66,10 +66,10 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.snmp4j</groupId>
