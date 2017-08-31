@@ -15,6 +15,15 @@
   </properties>
 
   <build>
+      <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-idea-plugin</artifactId>
+              <version>2.2.1</version>
+            </plugin>
+          </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -28,8 +37,16 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -40,18 +57,10 @@
                 </configuration>
             </plugin>
             <plugin>
-			  <!-- Build an executable JAR -->
-			  <groupId>org.apache.maven.plugins</groupId>
-			  <artifactId>maven-jar-plugin</artifactId>
-			  <version>3.0.2</version>
-			  <configuration>
-				<archive>
-					<manifest>
-						<mainClass>com.enefyod.app.App</mainClass>
-					</manifest>
-				</archive>
-			</configuration>
-		</plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-idea-plugin</artifactId>
+                <version>2.2.1</version>
+            </plugin>
         </plugins>
   </build>
 
