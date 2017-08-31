@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.enefyod.app</groupId>
-  <artifactId>snmp-list</artifactId>
+  <artifactId>SnmpInterfacesListPrinter</artifactId>
   <version>0.5</version>
   <packaging>jar</packaging>
 
-  <name>snmp-list</name>
+  <name>SnmpInterfacesListPrinter</name>
   <url>http://maven.apache.org</url>
 
   <properties>
