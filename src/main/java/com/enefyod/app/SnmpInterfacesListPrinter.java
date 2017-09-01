@@ -64,6 +64,10 @@ public class SnmpInterfacesListPrinter {
 
     private void printTableContent(List<TableEvent> events) {
         for (TableEvent event : events) {
+            if(event.isError()) {
+                System.out.println(event.getErrorMessage());
+                System.exit(-1);
+            }
             for (VariableBinding vb : event.getColumns()) {
                 if (vb != null) {
                     // Find OID name
